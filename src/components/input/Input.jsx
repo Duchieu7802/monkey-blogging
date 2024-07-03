@@ -1,17 +1,17 @@
 import { useController } from "react-hook-form";
 import styled from "styled-components";
-import EyeOpen from "../icon/EyeOpen";
 const InputStyles = styled.div`
 	width: 100%;
 	position: relative;
 	input {
-		padding: ${(props) => (props.hasIcon ? "15px 25px 15px 15px" : "15px")};
+		padding: ${(props) => (props.hasIcon ? "15px 50px 15px 15px" : "15px")};
 		background-color: ${(props) => props.theme.grayLight};
 		border-radius: 8px;
 		width: 100%;
 		border: 1px solid transparent;
 		font-weight: 400;
 		transition: all 0.2s linear;
+		font-size: 14px;
 	}
 	input::-webkit-input-placeholder {
 		color: rgba(132, 135, 139, 1);
@@ -48,7 +48,7 @@ const Input = ({ control, name = "", type = "text", children, ...props }) => {
 	return (
 		<InputStyles hasIcon={children ? true : false}>
 			<input id={name} type={type} {...field} {...props} />
-			{children ? <div className="input-icon">{children}</div> : null}
+			{children ? <div>{children}</div> : null}
 		</InputStyles>
 	);
 };
