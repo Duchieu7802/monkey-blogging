@@ -32,7 +32,7 @@ const Button = ({
 		</ButtonStyle>
 	);
 };
-Button.PropTypes = {
+Button.propTypes = {
 	type: PropTypes.oneOf(["button", "submit"]).isRequired,
 	children: PropTypes.node,
 	onClick: PropTypes.func,
